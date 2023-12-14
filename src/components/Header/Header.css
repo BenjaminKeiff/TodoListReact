@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'staywild';
+	src: url('./assets/font/Stay\ Wild.ttf'),
+}
+
+#logo {
+    width: 60px;
+}
+
+#header{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    color: #FF7B40;
+    background-color: #35D699;
+    border-bottom: #007046 solid 2px;
+}
+
+#title {
+    font-family: 'staywild'!important;
+    text-shadow: 3px 3px 3px #007046;
+    position: relative;
+    top: 10px;
+
+}
+#header div{
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+}

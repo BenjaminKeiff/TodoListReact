@@ -1,0 +1,77 @@
+.todoThing {
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    background-color: #FF9E73;
+    border: 2px solid black;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.todoThing p {
+    font-size: 1.3rem;
+    margin: 0 0 0 5px;
+}
+
+.todoThing button {
+    margin: 0 5px 0 0;
+    padding: 0;
+    width: 80px;
+    height: 35px;
+}
+
+.todoThing.done {
+    font-size: 1.3rem;
+    background-color: #00AC6B;
+}
+
+.addThing {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.addThing input{
+    font-size: 1.3rem;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.addThing div{  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button{  
+    width: 120px;
+    margin: 10px 0px;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.popUpDelete {
+    position: absolute;
+    font-size: 1.2rem;
+    right: 0;
+    top: 80px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 10px 0 0;
+    background-color: red;
+    box-shadow: grey 3px 3px 3px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popUpDelete.active {
+    opacity: 1;
+  }
+
+.resetButton {
+
+}
