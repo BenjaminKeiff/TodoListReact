@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     user-select: none;
+    cursor: pointer;
 }
 
 .todoThing p {
@@ -51,6 +52,7 @@ button{
     margin: 10px 0px;
     padding: 5px;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .popUpDelete {
@@ -64,8 +66,6 @@ button{
     background-color: red;
     box-shadow: grey 3px 3px 3px;
     border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .popUpDelete.active {
