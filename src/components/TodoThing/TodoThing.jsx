@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TodoThing.css';
 
-export default function TodoThing({ TodoThingsProps, onDelete, onClick }) {
-  const [color, setColor] = useState("");
-
+export default function TodoThing({ TodoThingsProps, onDelete, onClick, onUpdate }) {
   const handleDeleteClick = () => {
     onDelete(TodoThingsProps);
   };
+
   const handleDoneTodo = () => {
-    if (color !== "done") {
-      setColor('done');
-    }
-    else {
-      setColor('');
-    }
+    onClick(TodoThingsProps);
+  };
+
+  const handleUpdateClick = () => {
+    onUpdate(TodoThingsProps);
   };
 
   return (
-    
-    <div className={`todoThing ${color}`} onClick={handleDoneTodo}>
-      <p>{TodoThingsProps.text}</p>
-      <button onClick={handleDeleteClick}>Done</button>
-    </div>
+    <>
+      <div className='todoCard'>
+        <div className={`todoThing ${TodoThingsProps.state ? 'done' : ''}`} onClick={handleDoneTodo}>
+          <p>{TodoThingsProps.text}</p>
+        </div>
+        <div>
+          <button onClick={handleUpdateClick}>Modifier</button>
+          <button onClick={handleDeleteClick}>Supprimer</button>
+        </div>
+      </div>
+    </>
   );
 }
