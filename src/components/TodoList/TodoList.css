@@ -1,6 +1,23 @@
 .todoList{
-    width: 50%;
+    width: 100%;
     align-items: center;
     margin: auto;
 }
 
+@media (max-width:400px) {
+    .todoList{
+        width: 100%;
+    }
+}
+
+@media (max-width:400px) and (max-width:600px) {
+    .todoList{
+        width: 80%;
+    }
+}
+
+@media (min-width:800px) and (max-width:1200px) {
+    .todoList{
+        width: 70%;
+    }
+}

@@ -80,7 +80,12 @@ export default function TodoList() {
   };
 
   const handleUpdateTodo = (updateTodo) => {
-    console.log(updateTodo);
+    const updatedThings = things.map((todo) =>
+      todo.id === updateTodo.id ? { ...todo, text: updateTodo.text } : todo
+    );
+  
+    setThings(updatedThings);
+    saveObjectsToLocalStorage("todoThing", updatedThings);
   };
   
 
@@ -92,9 +97,9 @@ export default function TodoList() {
 
       {things.map((thing) => (
         <TodoThing
-          key={thing.id} // Use a unique identifier for the key
+          key={thing.id}
           TodoThingsProps={thing}
-          onUpdate={() => handleUpdateTodo(thing)}
+          onUpdate={handleUpdateTodo}
           onClick={() => handleDoneTodo(thing)}
           onDelete={() => handleDeleteTodo(thing)}
         />

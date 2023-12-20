@@ -46,13 +46,15 @@
     display: block;
     height: 36px;
 }
+
 .addThing input:hover {
         border-color: #FF9E73;
-    }
+}
+
 .addThing input:focus{
         border-color: #FF9E73;
         background: #fff;
-    }
+}
 
 .addThing div{  
     display: flex;
@@ -95,13 +97,13 @@ button {
     touch-action: manipulation;
     vertical-align: baseline;
     width: auto;
-  }
+}
   
   button:hover,
   button:focus {
     background-color: #ff9d73a8;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  }
+}
 
 .resetButton button {
     background-color: rgb(252, 54, 54);
@@ -112,6 +114,7 @@ button {
 .resetButton button:focus {
     background-color: rgba(252, 54, 54, 0.671);
 }
+
 .resetButton {
     position: absolute;
     left: 0;
@@ -177,4 +180,8 @@ img:hover{
   width: 30px; 
   padding-left: 5px; 
   opacity: 70%;
+}
+
+@media (max-width:600px) {
+
 }
