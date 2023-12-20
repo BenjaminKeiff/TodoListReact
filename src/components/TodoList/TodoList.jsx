@@ -90,6 +90,7 @@ export default function TodoList() {
   };
 
   const handleUpdateTodo = (updateTodo) => {
+    // ne pas faire attention je n'ai pas eu le temps de faire la partie la
     const updatedThings = things.map((todo) =>
       todo.id === updateTodo.id ? { ...todo, text: updateTodo.newText } : todo
     );
