@@ -27,7 +27,8 @@ export default function TodoThing({ TodoThingsProps, onDelete, onClick, onUpdate
         <div className="todoThing">
           <p>{TodoThingsProps.text}</p>
         </div>
-          <img onClick={handleDoneTodo} src={`${TodoThingsProps.state ? noneLogo : doneLogo}`} /> // Selon le state le logo sera different
+        {/* Selon le state le logo sera different */}
+          <img onClick={handleDoneTodo} src={`${TodoThingsProps.state ? noneLogo : doneLogo}`} /> 
           <img onClick={handleUpdateClick} src={editionLogo}/>
           <img onClick={handleDeleteClick} src={deleteLogo}/>
       </div>

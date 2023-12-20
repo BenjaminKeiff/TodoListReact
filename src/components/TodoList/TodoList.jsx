@@ -45,13 +45,16 @@ export default function TodoList() {
 
   const handleAddTodo = (newTodo) => {
     // Fonction ajout de Todo
+    if (newTodo.text === "") {
+      return newTodo;
+    } else {
     setThings((prevThings) => {
       const updatedThings = [...prevThings, newTodo];
       // J'ajoute la nouvelle iteration au tableau et je sauvegarde le tout en local storage
       saveObjectsToLocalStorage("todoThing", updatedThings);
       return updatedThings;
     });
-  };
+  }};
 
   const handleResetTodo = () => {
     // Je fais de même mais en utilisant le tableau de base pour le reset
