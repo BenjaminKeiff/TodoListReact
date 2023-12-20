@@ -1,5 +1,10 @@
 import React from 'react';
 import './TodoThing.css';
+import editionLogo from './assets/edition.png';
+import deleteLogo from './assets/supprimer.png';
+import doneLogo from './assets/done.png';
+import noneLogo from './assets/none.png';
+
 
 export default function TodoThing({ TodoThingsProps, onDelete, onClick, onUpdate }) {
   const handleDeleteClick = () => {
@@ -16,14 +21,13 @@ export default function TodoThing({ TodoThingsProps, onDelete, onClick, onUpdate
 
   return (
     <>
-      <div className='todoCard'>
-        <div className={`todoThing ${TodoThingsProps.state ? 'done' : ''}`} onClick={handleDoneTodo}>
+      <div className={`todoCard ${TodoThingsProps.state ? 'done' : ''}`}>
+        <div className="todoThing">
           <p>{TodoThingsProps.text}</p>
         </div>
-        <div>
-          <button onClick={handleUpdateClick}>Modifier</button>
-          <button onClick={handleDeleteClick}>Supprimer</button>
-        </div>
+          <img onClick={handleDoneTodo} src={`${TodoThingsProps.state ? noneLogo : doneLogo}`} />
+          <img onClick={handleUpdateClick} src={editionLogo}/>
+          <img onClick={handleDeleteClick} src={deleteLogo}/>
       </div>
     </>
   );
