@@ -7,6 +7,7 @@ import './Header.css';
 
 export default function Header() {
   return (
+    // Composant header contenant un composant "nav"
     <header id='header'>
         <div>
             <img id='logo' src={logo} alt="" />

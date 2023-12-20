@@ -7,6 +7,8 @@ import noneLogo from './assets/none.png';
 
 
 export default function TodoThing({ TodoThingsProps, onDelete, onClick, onUpdate }) {
+
+  // Je gère les differents clics et j'utilise les fonction dans le composant parent
   const handleDeleteClick = () => {
     onDelete(TodoThingsProps);
   };
@@ -25,7 +27,7 @@ export default function TodoThing({ TodoThingsProps, onDelete, onClick, onUpdate
         <div className="todoThing">
           <p>{TodoThingsProps.text}</p>
         </div>
-          <img onClick={handleDoneTodo} src={`${TodoThingsProps.state ? noneLogo : doneLogo}`} />
+          <img onClick={handleDoneTodo} src={`${TodoThingsProps.state ? noneLogo : doneLogo}`} /> // Selon le state le logo sera different
           <img onClick={handleUpdateClick} src={editionLogo}/>
           <img onClick={handleDeleteClick} src={deleteLogo}/>
       </div>

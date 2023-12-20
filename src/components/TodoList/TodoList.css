@@ -1,23 +1,28 @@
-.todoList{
-    width: 100%;
+.todoList {
+    width: 50%;
     align-items: center;
     margin: auto;
 }
 
-@media (max-width:400px) {
-    .todoList{
+@media (max-width: 400px) {
+    .todoList {
         width: 100%;
     }
 }
 
-@media (max-width:400px) and (max-width:600px) {
-    .todoList{
-        width: 80%;
+@media (min-width: 401px) and (max-width: 600px) {
+    .todoList {
+        width: 90%;
     }
 }
 
-@media (min-width:800px) and (max-width:1200px) {
-    .todoList{
+@media (min-width: 601px) and (max-width: 800px) {
+    .todoList {
+        width: 80%;
+    }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+    .todoList {
         width: 70%;
     }
 }

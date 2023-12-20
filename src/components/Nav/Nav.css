@@ -8,6 +8,18 @@
     justify-content: space-around;
 }
 
+#nav img{
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+#nav img:hover{
+    width: 40px;
+    opacity: 70%;
+}
+
 .link{
     font-family: 'staywild'!important;
 }
@@ -34,4 +46,15 @@ a.active{
 
 a:hover{
     text-decoration: underline;
+}
+
+@media (max-width:800px) {
+    #nav img{
+        display: block;
+    }
+
+    #nav li{
+        display: none;
+    }
+
 }

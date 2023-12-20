@@ -116,7 +116,7 @@ button {
 }
 
 .resetButton {
-    position: absolute;
+    position: relative;
     left: 0;
 }
 
@@ -182,6 +182,3 @@ img:hover{
   opacity: 70%;
 }
 
-@media (max-width:600px) {
-
-}
